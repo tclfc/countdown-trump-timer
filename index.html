@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown to End of Trump's Second Coming, sorry, Term</title>
+    <title>Countdown to End of Second Trump Term</title>
     <style>
         /* Basic styling for responsive and centered layout */
         body {
@@ -39,7 +39,7 @@
 
         /* Countdown display styling */
         .countdown {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
         /* Responsive styling for smaller screens */
@@ -48,7 +48,7 @@
                 font-size: 1.2rem;
             }
             .countdown {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -72,16 +72,6 @@
                 const years = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365));
                 const weeks = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 7));
                 const days = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
-
-                // Display countdown in the format "X Years, Y Weeks, Z Days"
-                document.getElementById("countdown").textContent = `${years} Years, ${weeks} Weeks, ${days} Days`;
-            } else {
-                document.getElementById("countdown").textContent = "Term has ended.";
-            }
-        }
-
-        // Update countdown every second
-        setInterval(calculateCountdown, 1000);
-    </script>
-</body>
-</html>
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+         
